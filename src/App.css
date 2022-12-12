@@ -1,0 +1,234 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-family: 'Poppins', sans-serif; */
+  font-family: 'Roboto', sans-serif;
+
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.header-container {
+  display: flex;
+  padding: 2rem;
+  justify-content: space-between;
+}
+
+.search-box {
+  padding: 1.4rem;
+  width: 28rem;
+  font-weight: bold;
+  font-size: 1.4rem;
+  background-color: #e4e4ee;
+  border: 0;
+  border-radius: 0.9rem;
+  margin-left: 3rem;
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: black;
+  font-weight: 400;
+  font-size: 1.5rem;
+  opacity: 1;
+  /* Firefox */
+}
+
+.PopUpBox-container {
+  position: relative;
+  border-radius: 0.9rem;
+  width: 39rem;
+  height: 26rem;
+  position: absolute;
+  z-index: 1;
+  background-color: #fff;
+  left: 46rem;
+  top: 16rem;
+}
+
+.popup-heading {
+  text-align: center;
+  margin-top: 3.5rem;
+  font-size: 2.8em;
+  text-shadow: 0.5px 0 currentColor;
+  letter-spacing: 0.5px;
+}
+
+.popup-input {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3.5rem;
+}
+
+.popup-input>input {
+  width: 34.5rem;
+  background-color: #f0f0f1;
+  border: 0;
+  margin: 1rem 2rem 1rem 2rem;
+  padding: 1.5rem;
+
+}
+
+/* For Note */
+.note-container {
+  border-radius: 0.3rem;
+  /* width: 25rem; */
+  height: 11rem;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  font-size: 1.2rem;
+  margin-top: 1.6rem;
+}
+
+.note-header {
+  display: flex;
+  /* justify-content: space-between; */
+  font-size: 1.4rem;
+  gap: 16rem;
+  margin-left: 1rem;
+  margin-top: 0.5rem;
+}
+
+.arrows {
+  position: relative;
+  color: #adb7c7;
+  /* height: 0rem; */
+  display: flex;
+  gap: 18.5rem;
+  margin-left: 0.8rem;
+  margin-top: auto;
+  margin-bottom: 0.2rem
+}
+
+.right_arrow {
+  display: flex;
+  margin-left: 21rem;
+}
+
+
+.note-content {
+  float: left;
+  width: 23rem;
+  overflow-y: auto;
+  height: 42px;
+  margin-left: 1rem;
+}
+
+/* For Steps */
+.steps-container {
+  display: flex;
+  width: 94vw;
+  margin-left: 5rem;
+  gap: 4.3rem;
+}
+
+.steps {
+  min-height: 50rem;
+  background-color: #e4e4ee;
+  font-size: 1.6rem;
+  font-weight: 200;
+  padding: 1.5rem;
+  width: 28rem;
+
+}
+
+
+/* for body */
+/* .body-container {
+  position: relative;
+  width: 131rem;
+} */
+
+.opacity-down {
+  opacity: 0.4;
+}
+
+.bg-light-dim {
+  border-color: #b7bcc6b0;
+}
+
+/* media Quaries */
+
+
+@media only screen and (min-width: 200px) and (max-width: 500px) {
+  .search-box {
+    width: 10rem;
+  }
+
+  .header-container {
+    padding-right: 3rem;
+    width: 43rem;
+  }
+
+  .steps-container {
+    gap: 2.3rem;
+    flex-wrap: wrap;
+    width: 34rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+
+/* //. */
+
+@media only screen and (min-width: 501px) and (max-width: 766px) {
+  .steps-container {
+    gap: 2.3rem;
+    flex-wrap: wrap;
+    width: 100rem
+  }
+
+  .header-container {
+    width: 97rem;
+  }
+}
+
+
+@media only screen and (min-width: 768px) and (max-width:900px) {
+  .body-container {
+    position: relative;
+    width: 131rem;
+  }
+
+  .steps-container {
+    gap: 2.3rem;
+    flex-wrap: wrap;
+    width: 100rem
+  }
+}
+
+
+
+@media only screen and (min-width:905px) and (max-width:1309px) {
+  .steps-container {
+    gap: 4.1rem;
+    margin-right: 1rem;
+  }
+
+  .body-container {
+    width: 128rem;
+  }
+}
+
+
+
+@media only screen and (min-width:1305px) {
+  .header-container {
+    width: 132rem;
+  }
+}
+
+
+
+
+
+/* @media only screen and (min-width:900px) and (max-width: 1200px) {
+  .search-box {
+    width: 14rem;
+  }
+} */
