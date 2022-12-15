@@ -13,77 +13,47 @@ const Note = ({ data }) => {
     const stepFour = useGlobalContext().step_4;
     const dispatch = useGlobalContext().dispatch;
 
-    function checkSpace(step, row, col) {
-        for (let i = 0; i < step.length; i++)
-            if ((step[i].row === row) && (step[i].col === col))
-                return false;
-        return true;
-    }
-
     function moveOnLeft() {
         if (data.col === 4) {
-            const result = checkSpace(stepThree, data.row, data.col - 1);
-            if (result) {
-                const newData = data;
+                            const newData = data;
                 newData.col = newData.col - 1;
                 localStorage.setItem('notes', JSON.stringify(allSteps));
                 dispatch({ type: 'POSITION_CNG', payload: allSteps })
-            } else
-                alert('No space on left side')
+
         }
         else if (data.col === 3) {
-            const result = checkSpace(stepTwo, data.row, data.col - 1);
-            if (result) {
                 const newData = data;
                 newData.col = newData.col - 1;
                 localStorage.setItem('notes', JSON.stringify(allSteps))
                 dispatch({ type: 'POSITION_CNG', payload: allSteps })
-            } else
-                alert('No space on left side')
         }
         else if (data.col === 2) {
-            const result = checkSpace(stepOne, data.row, data.col - 1);
-            if (result) {
                 const newData = data;
                 newData.col = newData.col - 1;
                 localStorage.setItem('notes', JSON.stringify(allSteps))
                 dispatch({ type: 'POSITION_CNG', payload: allSteps })
-            } else
-                alert('No space on left side')
         }
     }
 
     function moveOnRight() {
         if (data.col === 1) {
-            const result = checkSpace(stepTwo, data.row, data.col + 1);
-            if (result) {
                 const newData = data;
                 newData.col = newData.col + 1;
                 localStorage.setItem('notes', JSON.stringify(allSteps))
                 dispatch({ type: "TEST", payload: allSteps })
                 dispatch({ type: 'POSITION_CNG', payload: allSteps })
-            } else
-                alert('No space on right side')
         }
         else if (data.col === 2) {
-            const result = checkSpace(stepThree, data.row, data.col + 1);
-            if (result) {
                 const newData = data;
                 newData.col = newData.col + 1;
                 localStorage.setItem('notes', JSON.stringify(allSteps))
                 dispatch({ type: 'POSITION_CNG', payload: allSteps })
-            } else
-                alert('No space on right side')
         }
         else if (data.col === 3) {
-            const result = checkSpace(stepFour, data.row, data.col + 1);
-            if (result) {
                 const newData = data;
                 newData.col = newData.col + 1;
                 localStorage.setItem('notes', JSON.stringify(allSteps))
                 dispatch({ type: 'POSITION_CNG', payload: allSteps })
-            } else
-                alert('No space on right side')
         }
 
     }
